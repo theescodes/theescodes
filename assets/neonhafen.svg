@@ -37,11 +37,20 @@
     <radialGradient id="halo" cx=".5" cy=".5" r=".5">
       <stop offset="0" stop-color="#ffb384" stop-opacity=".5"/><stop offset="1" stop-color="#ffb384" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffe6d2" stop-opacity=".7"/>
-      <stop offset=".35" stop-color="#ff8a4d" stop-opacity=".26"/>
+    <!-- Anchored in user space at the lamp, so it stays correctly oriented
+         however the beam group is rotated. An objectBoundingBox gradient
+         runs left-to-right across the box and inverts on the left-hand beam. -->
+    <linearGradient id="beam" gradientUnits="userSpaceOnUse" x1="1047" y1="86" x2="1470" y2="86">
+      <stop offset="0" stop-color="#ffe6d2" stop-opacity=".5"/>
+      <stop offset=".28" stop-color="#ff8a4d" stop-opacity=".17"/>
+      <stop offset=".7" stop-color="#f54900" stop-opacity=".05"/>
       <stop offset="1" stop-color="#f54900" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="feather" gradientUnits="userSpaceOnUse" x1="1047" y1="18" x2="1047" y2="154">
+      <stop offset="0" stop-color="#000"/><stop offset=".38" stop-color="#fff"/>
+      <stop offset=".62" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <mask id="beammask"><rect x="1000" y="10" width="520" height="152" fill="url(#feather)"/></mask>
     <linearGradient id="refl" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffb384" stop-opacity=".6"/><stop offset="1" stop-color="#f54900" stop-opacity="0"/>
     </linearGradient>
@@ -89,8 +98,8 @@
     <polygon points="1032,228 1062,228 1086,320 1008,320" fill="url(#refl)" class="shimmer"/>
 
     <!-- sweeping beams, drawn behind the tower -->
-    <g class="sweep"><polygon points="1047,86 1460,4 1460,168" fill="url(#beam)"/></g>
-    <g class="sweep" style="animation-delay:-3.5s"><polygon points="1047,86 640,14 640,158" fill="url(#beam)" opacity=".45"/></g>
+    <g class="sweep"><polygon points="1047,86 1470,26 1470,146" fill="url(#beam)" mask="url(#beammask)"/></g>
+    <g class="sweep" style="animation-delay:-3.5s"><polygon points="1047,86 1470,26 1470,146" fill="url(#beam)" mask="url(#beammask)" opacity=".5"/></g>
 
     <!-- lighthouse: tapered tower with two bands, gallery, lamp room, roof -->
     <ellipse cx="1047" cy="86" rx="54" ry="46" fill="url(#halo)" class="lamp"/>
