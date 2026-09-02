@@ -11,14 +11,14 @@ from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
 
 
-def text_to_path(ttf, text, size, x, y, letter_spacing=0.0):
+def text_to_path(ttf, text, size, x, y, letter_spacing=0.0, precision=2):
     font = TTFont(ttf)
     upem = font["head"].unitsPerEm
     scale = size / upem
     cmap = font.getBestCmap()
     gs = font.getGlyphSet()
     hmtx = font["hmtx"]
-    pen = SVGPathPen(gs, ntos=lambda v: f"{v:.2f}".rstrip("0").rstrip("."))
+    pen = SVGPathPen(gs, ntos=lambda v: f"{v:.{precision}f}".rstrip("0").rstrip("."))
     cursor = x
     for ch in text:
         name = cmap.get(ord(ch))

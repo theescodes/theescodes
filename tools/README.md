@@ -21,5 +21,13 @@ License 1.1.
 Kerning is not applied. The display run is all-caps with positive
 letter-spacing, where GPOS pairs contribute nothing visible.
 
-License texts for the bundled faces are in `OFL-ChakraPetch.txt` and
-`OFL-IBMPlexMono.txt`.
+## The boot panel
+
+`build_boot.py` writes `../assets/boot.svg`. It exists as an image rather than a
+fenced code block because GitHub gives a README no control over code-block
+colours, and its markdown pipeline ignores ANSI escapes — a fenced block renders
+monochrome in both themes. Inside an SVG the colours are ours, and the panel
+brings its own dark ground, so it reads the same on light and dark GitHub.
+
+Edit the `LINES` table at the top; each entry is a list of `(text, colour)`
+segments laid out on the monospace grid. `REDACT` draws a bar instead of glyphs.
