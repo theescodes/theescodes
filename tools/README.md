@@ -31,3 +31,19 @@ brings its own dark ground, so it reads the same on light and dark GitHub.
 
 Edit the `LINES` table at the top; each entry is a list of `(text, colour)`
 segments laid out on the monospace grid. `REDACT` draws a bar instead of glyphs.
+
+## The section panels
+
+`build_panels.py` writes `../assets/running.svg` and `../assets/system.svg`.
+Same reason as the boot panel: GitHub applies its own markdown styles to a
+README and offers no way to override them, so anything meant to look designed
+has to arrive as an image.
+
+What deliberately stays markdown: the two prose paragraphs and the contact
+links. An image cannot be selected, searched, translated or followed, so the
+words that matter and every link live in real text.
+
+The tradeoff to know about: these panels are 1200 units wide, so on a phone
+they scale to roughly a third and the type gets small. The prose carries the
+message there; the panels are detail for a wider screen. Each one also has a
+full `<title>`, which is what a screen reader announces.
