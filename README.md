@@ -12,8 +12,8 @@ started as a teenager, poking at HTML.
 |:--|:--|:--|:--|
 | ◉ 01 | daytime — B2B ticketing at CTS Eventim | `Angular` `Nx` `NgRx` | `LIVE` |
 | ◉ 02 | **[thees.codes](https://thees.codes)** — this person, as a website | `SvelteKit` `Paraglide` | `LIVE` |
-| ◉ 03 | ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ | ▒▒▒▒▒▒▒▒ | `PRIVATE` |
-| ◉ 04 | ▒▒▒▒▒▒▒▒ | ▒▒▒▒▒▒▒▒ | `PRIVATE` |
+| ◉ 03 | *— private —* | *—* | `PRIVATE` |
+| ◉ 04 | *— private —* | *—* | `PRIVATE` |
 
 > Nothing to clone here — my repos are private.
 > Happy to talk about the work anyway.
@@ -38,7 +38,7 @@ never      cookie banners
 
 ```
 2025   senior software engineer @ cts eventim
-2024   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   private
+2024   — private —
 2022   frontend developer @ cts eventim
 2020   full-stack @ nordfrost — yard management system, site relaunch
 2018   IT specialist apprenticeship — finished in two years instead of three
